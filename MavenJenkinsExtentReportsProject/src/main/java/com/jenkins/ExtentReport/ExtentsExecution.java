@@ -1,6 +1,7 @@
 package com.jenkins.ExtentReport;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.testng.Reporter;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
@@ -16,6 +17,7 @@ public void open()
 {
 	Reporter.log("Open",true);
 	WebDriverManager.edgedriver().setup();
+	driver=new EdgeDriver();
 }
 @BeforeMethod
 public void login()
